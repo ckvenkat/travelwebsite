@@ -32,12 +32,13 @@ public class SearchPageTest extends TestBase {
 		SearchResultPage searchResultPage = new SearchResultPage();
 		PageFactory.initElements(driver, searchResultPage);
 		searchResultPage.verifySearchResultPage(test);
+		driver.quit();
 	}
 	
 	@AfterTest
 	public void flushReport() {
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 	
 	@DataProvider
